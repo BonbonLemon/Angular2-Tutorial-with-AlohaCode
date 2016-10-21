@@ -8,6 +8,10 @@ import { Component } from 'angular2/core'
 
 export class EventListComponent {
     pageTitle: string = 'Event List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
+    showImage: boolean = false;
+    searchCriteria: string = 'beach';
     events: any[] = [  {
                 "name": "Event 1",
 				"code": "Evt100",
@@ -89,4 +93,8 @@ export class EventListComponent {
                 "capacity": 400
                 }
             ];
+            
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 }
