@@ -34,7 +34,9 @@
                     <th>Fee</th>
                     <th>Rating</th>
                 </tr>
-                <tr *ngFor='#event of events'>
+            </thead>
+            <tbody>
+                <tr *ngFor='#event of events | eventFilter:searchCriteria'>
                     <td>
                         <img *ngIf='showImage'
                              [src]='event.imageUrl'
@@ -48,10 +50,6 @@
                     <td>{{event.fee | currency: 'USD':true:'1.2-2'}}</td>
                     <td>{{event.rating}}</td>
                 </tr>
-            </thead>
-            <tbody>
-                
-                
             </tbody>
         </table>
     </div>
