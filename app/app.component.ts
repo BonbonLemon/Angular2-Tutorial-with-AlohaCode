@@ -1,5 +1,8 @@
 import { Component } from 'angular2/core';
 import { EventListComponent } from './events/event-list.component';
+import { EventService } from './events/event.service';
+import { HTTP_PROVIDERS } from 'angular2/http';
+import 'rxjs/Rx';   // Load all features
 
 @Component({
     selector: 'events-app',
@@ -9,7 +12,8 @@ import { EventListComponent } from './events/event-list.component';
         <el-events></el-events>
     </div>
     `,
-    directives: [EventListComponent]
+    directives: [EventListComponent],
+    providers: [EventService, HTTP_PROVIDERS]
 })
 
 export class AppComponent {
