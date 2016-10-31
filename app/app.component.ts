@@ -12,11 +12,13 @@ import { EventDetailComponent } from './events/event-detail.component';
     template: `
     <div>
         <nav class='navbar navbar-default'>
-            <a class='navbar-brand'>{{pageTitle}}</a>
-            <ul class='nav navbar-nav'>
-                <li><a [routerLink]="['Welcome']">Home</a></li>
-                <li><a [routerLink]="['Events']">Event List</a></li>
-            </ul>
+            <div class='container-fluid'>
+                <a class='navbar-brand'>{{pageTitle}}</a>
+                <ul class='nav navbar-nav'>
+                    <li><a [routerLink]="['Welcome']">Home</a></li>
+                    <li><a [routerLink]="['Events']">Event List</a></li>
+                </ul>
+            </div>
         </nav>
         <div class='container'>
             <router-outlet></router-outlet>
